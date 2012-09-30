@@ -29,4 +29,5 @@ primeFactors(2*3*5*11) = [2, 3, 5, 11];
 fun last(x::nil) = x
   | last(x::xs) = last xs;
 
-last(primeFactors(valOf(IntInf.fromString("600851475143")))) = 6857;
+val answer =
+  last(primeFactors(valOf(IntInf.fromString("600851475143"))));

@@ -23,5 +23,3 @@ val answer =
   foldl op + 0
     (takeWhile (fn x => x <= 4000000)
                (sfilter (fn x => x mod 2 = 0) fibs));
-
-answer = 4613732;

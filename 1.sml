@@ -18,7 +18,6 @@ fun dividesEither(a, b) =
  * memory, since there's not a fold that works on streams *)
 fun upto(limit) = takeWhile (fn x => x < limit);
 
-fun answer(a, b, limit) =
+val answer =
   sum (upto(1000) (dividesEither(3, 5) naturalNumbers));
 
-answer(3, 5, 1000) = 233168;
