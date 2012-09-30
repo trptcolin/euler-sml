@@ -8,7 +8,7 @@
  * exceed four million, find the sum of the even-valued terms.
 *)
 
-use "lazy_utils.ml";
+use "lazy_utils.sml";
 
 val fibs =
   let

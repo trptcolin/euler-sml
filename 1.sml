@@ -5,7 +5,7 @@
  * Find the sum of all the multiples of 3 or 5 below 1000.
 *)
 
-use "lazy_utils.ml";
+use "lazy_utils.sml";
 
 fun sum(xs) = foldl op + 0 xs;
 
