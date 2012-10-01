@@ -14,17 +14,17 @@ fun isPalindrome n =
     digits = rev(digits)
   end;
 
-fun lazy iterate f x =
-  Cons(x, (iterate f)(f x));
-
 fun rangeUp a b =
   (takeWhile (fn x => x < b)) (iterate (fn x => x + 1) a);
 
 fun rangeDown a b =
   (takeWhile (fn x => x > b)) (iterate (fn x => x - 1) a);
 
+fun comprehend f xs ys =
+  map (fn x => map (f x) ys) xs;
+
 fun allProducts xs ys =
-  map (fn x:int => (map (fn y => x * y) ys)) xs;
+  comprehend (fn x => fn y => x * y) xs ys;
 
 allProducts (rangeDown 10 1) (rangeDown 10 1);
 
