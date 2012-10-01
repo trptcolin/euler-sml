@@ -41,3 +41,6 @@ fun dropWhile f (Cons(x,xs)): 'a stream =
   if f x then dropWhile f xs
   else Cons(x, xs);
 
+fun lazy iterate f x =
+  Cons(x, iterate(f)(f x));
+
